@@ -1,0 +1,45 @@
+<p>home works!</p>
+
+<!-- Display Employee List -->
+<table border="1" style="width: 100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.status }}</td>
+      <td>
+        <!-- Delete button -->
+        <button (click)="deleteUser(emp.id)">Delete</button>
+        
+        <!-- Edit button -->
+        <button [routerLink]="['/editer', emp.id]">Edit</button>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2>{{ isEditing ? 'Edit Employee' : 'Add New Employee' }}</h2>
+<form (ngSubmit)="isEditing ? updateEmployee() : onSubmit()">
+  <label>
+    Name:
+    <input [(ngModel)]="isEditing ? employeeToEdit.name : newEmployee.name" name="name" required />
+  </label>
+  <label>
+    Status:
+    <input [(ngModel)]="isEditing ? employeeToEdit.status : newEmployee.status" name="status" required />
+  </label>
+  <button type="submit">{{ isEditing ? 'Update Employee' : 'Add Employee' }}</button>
+</form>
+<router-outlet></router-outlet>
+
+
+<button (click)="logout()">Logout</button>
+<button (click)="refreshToken()">Refresh Token</button>

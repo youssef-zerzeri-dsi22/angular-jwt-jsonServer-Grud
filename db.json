@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe"
+    },
+    {
+      "id": "3",
+      "name": "youssef"
+    },
+    {
+      "id": "3",
+      "name": "hama"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "First post",
+      "content": "This is the first post"
+    },
+    {
+      "id": "2",
+      "title": "Second post",
+      "content": "This is the second post"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Jane",
+      "status": "active",
+      "id": "2"
+    },
+    {
+      "name": "melk",
+      "status": "inactive",
+      "id": "4"
+    },
+    {
+      "id": 3,
+      "name": "hamza",
+      "status": "active"
+    }
+  ]
+}

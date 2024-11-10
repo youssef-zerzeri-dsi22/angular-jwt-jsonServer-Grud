@@ -1,0 +1,16 @@
+<p>Editor works!</p>
+<div>
+  <h3>Edit Employee</h3>
+  <form [formGroup]="updateForm" (ngSubmit)="updateEmployee()">
+    <label>Name:</label>
+    <input type="text" formControlName="name" name="name" required />
+
+    <label>Status:</label>
+    <select formControlName="status" name="status" required>
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+    </select>
+
+    <button type="submit">Update</button>
+  </form>
+</div>
